@@ -1,4 +1,4 @@
-import './category.scss';
+import './Category.scss';
 
 function Category({category}) {
     const {title, imageUrl} = category;

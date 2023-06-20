@@ -1,4 +1,4 @@
-import './categories.scss'
+import './Categories.scss'
 import Category from '../Category/Category'
 
 function Categories({categories}) {
