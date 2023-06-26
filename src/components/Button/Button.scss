@@ -1,0 +1,24 @@
+.btn {
+    border: 2px solid green;
+    border-radius: 20px;
+    height: 30px;
+    min-width: 100px;
+    background: white;
+    color: green;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 5px green;
+    }
+}
+
+.google-sign-in {
+    border: 2px solid grey;
+    color: grey;
+    width: 160px;
+
+    &:hover {
+        box-shadow: 0 0 5px grey;
+    }
+}
