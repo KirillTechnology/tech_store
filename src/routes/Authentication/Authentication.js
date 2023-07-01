@@ -5,7 +5,7 @@ import './Authentication.scss'
 
 function Authentication() {
     return (
-        <div class='authentication-page'>
+        <div className='authentication-page'>
             <h1>Authentication</h1>
             <SignInForm />
             <SignUpForm />
