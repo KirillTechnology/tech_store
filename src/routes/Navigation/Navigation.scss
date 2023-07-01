@@ -4,6 +4,7 @@
     align-items: center;
     height: 50px;
     padding: 0 20px;
+    box-shadow: 0 0 4px grey;
 
     .logo {
         height: 100%;
@@ -12,6 +13,7 @@
     .menu-container {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         gap: 20px;
 
         a {
