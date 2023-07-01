@@ -11,6 +11,16 @@
     &:hover {
         box-shadow: 0 0 5px green;
     }
+
+    &:disabled {
+        color: grey;
+        border: 2px solid grey;
+        cursor: not-allowed;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
 }
 
 .google-sign-in {

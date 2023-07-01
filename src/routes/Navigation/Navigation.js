@@ -6,6 +6,7 @@ import { signOutUser } from "../../utils/firebase/firebase.utils"
 import { CartContext } from "../../context/CartContext"
 import CartIcon from "../../components/CartIcon/CartIcon"
 import CartDropDown from "../../components/CartDropDown/CartDropDown"
+import Cover from "../../components/Cover/Cover"
 import './Navigation.scss'
 
 
@@ -27,6 +28,7 @@ function Navigation() {
                 </div>
 
                 {isCartOpen && <CartDropDown />}
+                {/* {isCartOpen && <Cover />} */}
             </div>
 
             <Outlet />
