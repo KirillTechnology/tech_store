@@ -32,6 +32,8 @@ function Navigation() {
             </div>
 
             <Outlet />
+
+            {/* <Outlet /> Footer test */}
         </>
     )
 }
