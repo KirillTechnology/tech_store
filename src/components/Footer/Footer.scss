@@ -1,0 +1,38 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-top: 1px solid black;
+    // box-shadow: 0 0 4px grey;
+
+    .footer-text {
+        display: flex;
+        justify-content: start;
+        gap: 20px;
+        width: min(100%, 300px);
+        width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .made-by {
+        flex: 1 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        .footer-text {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
