@@ -31,7 +31,10 @@ function Navigation() {
                 {/* {isCartOpen && <Cover />} */}
             </div>
 
-            <Outlet />
+            <div className="main">
+                <Outlet />
+            </div>
+
         </>
     )
 }
