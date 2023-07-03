@@ -10,8 +10,9 @@ import './CartDropDown.scss'
 
 function CartDropDown() {
     const { cartItems, setIsCartOpen } = useContext(CartContext)
+    
     const navigate = useNavigate()
-
+    
     const goToCheckoutHandler = () => {
         setIsCartOpen(false)
         navigate('/checkout')

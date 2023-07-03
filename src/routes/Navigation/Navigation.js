@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Outlet, Link } from "react-router-dom"
 import { ReactComponent as Logo } from '../../assets/crown.svg'
+import { ReactComponent as Logo2 } from '../../assets/rad-logo.svg'
 import { UserContext } from "../../context/UserContext"
 import { signOutUser } from "../../utils/firebase/firebase.utils"
 import { CartContext } from "../../context/CartContext"
@@ -18,6 +19,7 @@ function Navigation() {
         <>
             <div className="navigation-bar">
                 <Link to='/'> <Logo className="logo" /> </Link>
+                {/* <Link to='/'> <Logo2 className="logo" /> <span>Logo</span></Link> */}
 
                 <div className="menu-container">
                     <Link className="link" to='/shop'>SHOP</Link>
