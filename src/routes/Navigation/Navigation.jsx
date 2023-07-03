@@ -19,7 +19,7 @@ function Navigation() {
     return (
         <>
             <NavigationBar>
-                <LogoContainer>
+                <LogoContainer to='/'>
                     <Logo />
                 </LogoContainer>
 
