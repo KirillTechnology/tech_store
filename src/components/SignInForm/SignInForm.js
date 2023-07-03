@@ -8,7 +8,7 @@ import {
 } from "../../utils/firebase/firebase.utils"
 import { getRedirectResult } from "firebase/auth";
 import FormInput from "../FormInput/FormInput"
-import Button from "../Button/Button"
+import Button, {BUTTON_TYPE_CLASSES} from "../Button/Button"
 
 import './SignInForm.scss'
 
@@ -75,10 +75,10 @@ function SignInForm() {
                 <br />
                 <br />
 
-                <Button buttonType={'default'} type='submit' style={{ width: '160px' }}>Sign In</Button>
+                <Button buttonType={BUTTON_TYPE_CLASSES.base} type='submit' style={{ width: '160px' }}>Sign In</Button>
                 <br />
 
-                <Button buttonType={'google'} type='button' onClick={signInGoogle}>Sign in with Google</Button>
+                <Button buttonType={BUTTON_TYPE_CLASSES.google} type='button' onClick={signInGoogle}>Sign in with Google</Button>
             </form>
 
         </div>

@@ -9,7 +9,7 @@ export const BaseButton = styled.button`
     background: white;
     color: green;
     font-weight: bold;
-    // cursor: pointer;
+    cursor: pointer;
 
     &:hover {
         box-shadow: 0 0 5px green;

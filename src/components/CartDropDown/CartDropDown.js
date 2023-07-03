@@ -3,7 +3,7 @@ import { CartContext } from '../../context/CartContext'
 import { useNavigate } from 'react-router-dom'
 
 import CartItem from '../CartItem/CartItem'
-import Button from '../Button/Button'
+import Button, {BUTTON_TYPE_CLASSES} from '../Button/Button'
 
 import './CartDropDown.scss'
 
@@ -31,7 +31,7 @@ function CartDropDown() {
                 </div>
 
                 <Button
-                    buttonType='default'
+                    buttonType={BUTTON_TYPE_CLASSES.base}
                     onClick={goToCheckoutHandler}
                     disabled={cartItems.length ? false : true}
                 >

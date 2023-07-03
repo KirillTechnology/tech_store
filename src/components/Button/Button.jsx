@@ -1,21 +1,25 @@
-// import { BaseButton, GoogleSignInButton } from "./Button.styles.jsx"
-import './Button.scss'
+import { BaseButton, GoogleSignInButton } from "./Button.styles.jsx"
+// import './Button.scss'
 
 
-const BUTTON_TYPE_CLASS = {
-    default: 'default',
-    google: 'google-sign-in',
+export const BUTTON_TYPE_CLASSES = {
+    base: 'base',
+    google: 'google',
+}
+
+const getButton = (buttonType = 'base') => {
+    return (
+        {
+            [BUTTON_TYPE_CLASSES.base]: BaseButton,
+            [BUTTON_TYPE_CLASSES.google]: GoogleSignInButton,
+        }[buttonType]
+    )
 }
 
 function Button({ buttonType, children, ...otherProps }) {
-    return (
-        <button
-            className={`btn ${BUTTON_TYPE_CLASS[buttonType]}`}
-            {...otherProps}
-        >
-            {children}
-        </button>
-    )
+    const CustomButton = getButton(buttonType)
+
+    return <CustomButton {...otherProps}> {children} </CustomButton>
 }
 
 
