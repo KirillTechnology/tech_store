@@ -8,7 +8,7 @@ function Checkout() {
     const { cartItems, cartTotal } = useContext(CartContext)
 
     return (
-        <div class='checkout-container'>
+        <div className='checkout-container'>
             <h1>CHECKOUT</h1>
             <br />
 

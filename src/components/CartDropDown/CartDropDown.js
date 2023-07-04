@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 import CartItem from '../CartItem/CartItem'
 import Button, {BUTTON_TYPE_CLASSES} from '../Button/Button'
+import { CartDropdown, CartDropdownItem } from './CartDropDown.styles'
 
 import './CartDropDown.scss'
 
@@ -20,15 +21,15 @@ function CartDropDown() {
 
     return (
         <>
-            <div className='cart-dropdown-container'>
+            <CartDropdown>
 
-                <div className='cart-dropdown-items'>
+                <CartDropdownItem>
                     {cartItems.length ? (
                         cartItems.map(item => <CartItem key={item.id} item={item} />)
                     ) : (
                         <span>Empty cart</span>
                     )}
-                </div>
+                </CartDropdownItem>
 
                 <Button
                     buttonType={BUTTON_TYPE_CLASSES.base}
@@ -37,7 +38,7 @@ function CartDropDown() {
                 >
                     GO TO CHECKOUT
                 </Button>
-            </div>
+            </CartDropdown>
         </>
     )
 }
