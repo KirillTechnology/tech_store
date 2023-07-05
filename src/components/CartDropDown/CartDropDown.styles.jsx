@@ -3,7 +3,7 @@ import { BaseButton, GoogleSignInButton } from "../Button/Button.styles.jsx"
 
 
 export const CartDropdown = styled.div`
-    border: 2px solid black;
+    border: 0px solid black;
     background: white;
     width: 300px;
     position: absolute;
@@ -35,5 +35,5 @@ export const CartDropdownItem = styled.div`
     gap: 10px;
     padding: 20px;
     // overflow-y: scroll;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid grey;
 `

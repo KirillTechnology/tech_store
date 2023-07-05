@@ -4,6 +4,10 @@
     margin-bottom: 40px;
     width: min(90%, 1000px);
 
+    .title {
+        color: black;
+    }
+
     .preview {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
