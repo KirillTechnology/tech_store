@@ -8,8 +8,8 @@ export const DirectoryItemImg = styled.div`
     background-position: center;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
-    // background-image: url(${(props) => props.imageUrl});
-    background-image: ${({imageUrl}) => `url(${imageUrl})`};
+    background-image: url(${(props) => props.$imageUrl});
+    // background-image: ${({$imageUrl}) => `url(${$imageUrl})`};
 `
 
 export const DirectoryItemText = styled.div`

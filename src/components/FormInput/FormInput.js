@@ -8,7 +8,7 @@ function FormInput({ label, ...otherProps }) {
             <Input {...otherProps} />
             {label &&
                 <InputLabel
-                    shrink={otherProps.value.length}
+                    $shrink={otherProps.value.length}
                     // className={`form-input-label ${otherProps.value.length ? 'active' : ''}`}
                 >
                     {label}

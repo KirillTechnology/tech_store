@@ -12,7 +12,7 @@ function DirectoryItem({ category }) {
     return (
         <DirectoryItemContainer onClick={onNavigateHandler}>
             <DirectoryItemImg 
-                imageUrl = {imageUrl}
+                $imageUrl = {imageUrl}
                 // style={{backgroundImage: `url(${imageUrl})`}} 
             />
             <DirectoryItemText>

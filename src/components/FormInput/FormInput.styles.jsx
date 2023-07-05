@@ -18,7 +18,7 @@ export const InputLabel = styled.label`
     top: 15px;
     pointer-events: none;
     transition: 0.1s;
-    ${({shrink}) => shrink && shrinkLabelStyles}
+    ${(props) => props.$shrink && shrinkLabelStyles}
 `
 
 export const Input = styled.input`
