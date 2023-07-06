@@ -15,9 +15,9 @@ function Checkout() {
             <div className='checkout-headers'>
                 <span className='product'>Product</span>
                 <span className='description'>Description</span>
-                <span className='quantity'>Quantity</span>
-                <span className='price'>Price</span>
-                <span className='remove'>Remove</span>
+                <span className='quantity'>Qty.</span>
+                <span className='price'>$</span>
+                <span className='remove'>Delete</span>
             </div>
 
             {cartItems.length ? null: <span className='empty'>Empty cart</span>}

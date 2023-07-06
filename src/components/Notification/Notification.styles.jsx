@@ -16,6 +16,7 @@ export const NotificationContainer = styled.div`
     padding: 5px 10px;
     color: white;
     display: flex;
+    gap: 10px;
     justify-content: center;
     // align-items: center;
     z-index: 11;

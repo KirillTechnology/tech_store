@@ -20,7 +20,7 @@ function CheckoutItem({ item }) {
                 <span className='btn-control' onClick={addItem}> + </span>
             </div>
 
-            <span className='price'>${item.price}.00</span>
+            <span className='price'>${item.price}</span>
             <span className='remove' onClick={clearItem}><b>&#10005;</b></span>
 
         </div>
