@@ -9,6 +9,7 @@ import CartDropDown from "../../components/CartDropDown/CartDropDown"
 import Cover from "../../components/Cover/Cover"
 
 import { NavigationBar, LogoContainer, Menu, NavLink, MainContainer } from './Navigation.styles.jsx'
+import Notification from "../../components/Notification/Notification"
 // import './Navigation.styles.scss'
 
 
@@ -31,6 +32,8 @@ function Navigation() {
 
                 {isCartOpen && <CartDropDown />}
             </NavigationBar>
+
+            <Notification />
 
             <MainContainer>
                 <Outlet />

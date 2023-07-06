@@ -31,5 +31,5 @@ export const NavLink = styled(Link)`
 `
 
 export const MainContainer = styled.div`
-    min-height: calc(100vh - 50px - 20px - 35px);
+    min-height: calc(100vh - 50px - 40px - 35px);
 `

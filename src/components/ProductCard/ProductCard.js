@@ -1,13 +1,19 @@
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
+import { NotificationContext } from '../../context/NotificationContext';
 
 import Button, {BUTTON_TYPE_CLASSES} from '../Button/Button';
 import './ProductCard.scss'
 
+
 function ProductCard({ product }) {
     const { addItemToCart } = useContext(CartContext)
+    const { notify } = useContext(NotificationContext)
 
-    const addProductToCart = () => { addItemToCart(product) }
+    const addProductToCart = () => { 
+        addItemToCart(product);
+        notify(`${product.name} added to cart`)
+    }
 
     return (
         <div className='product-card-container'>
