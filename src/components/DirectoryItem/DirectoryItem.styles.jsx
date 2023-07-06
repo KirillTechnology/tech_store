@@ -13,7 +13,7 @@ export const DirectoryItemImg = styled.div`
 `
 
 export const DirectoryItemText = styled.div`
-    border-top: 1px solid black;
+    // border-top: 1px solid black;
     text-align: center;
     width: 100%;
 
@@ -25,7 +25,7 @@ export const DirectoryItemText = styled.div`
 
 export const DirectoryItemContainer = styled.div`
     cursor: pointer;
-    border: 1px solid black;
+    // border: 1px solid black;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
