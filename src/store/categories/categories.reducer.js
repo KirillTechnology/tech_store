@@ -11,6 +11,6 @@ export const categoriesReducer = (state = INITIAL_CATEGORIES, action = {}) => {
         case CATEGORIES_ACTION_TYPES.SET_CATEGORIES_MAP:
             return { ...state, categoriesMap: payload }
         default:
-            throw state
+            return state
     }
 }
