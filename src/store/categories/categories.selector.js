@@ -1,5 +1,5 @@
 export const selectCategoriesMap = (state) => {
-    // console.log('selecCategoriesMap')
+    console.log('selecCategoriesMap')
     return (
         state.categories.categories.reduce((acc, category) => {
             const { title, items } = category

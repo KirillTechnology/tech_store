@@ -12,13 +12,13 @@ import './Category.scss'
 function Category() {
     const { category } = useParams()
     // const { categoriesMap } = useContext(CategoriesContext)
+    console.log('rendering/re-rendering Category')
     const categoriesMap = useSelector(selectCategoriesMap)
     const [products, setProducts] = useState([])
-    // console.log('rendering/re-rendering Category')
     
 
     useEffect(() => {
-        // console.log('useEffect --> setProducts')
+        console.log('useEffect --> setProducts')
         setProducts(categoriesMap[category])
     }, [category, categoriesMap])
 
