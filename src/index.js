@@ -7,8 +7,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 
-// import { UserProvider } from './context/UserContext';
-// import { CategoriesProvider } from './context/CategoriesContext';
 import { CartProvider } from './context/CartContext';
 import { NotificationProvider } from './context/NotificationContext';
 import App from './App';

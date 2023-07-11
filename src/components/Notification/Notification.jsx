@@ -1,4 +1,3 @@
-import { UserContext } from "../../context/UserContext";
 import { NotificationContext } from "../../context/NotificationContext";
 import { NotificationContainer, Cross } from "./Notification.styles";
 import { useContext } from "react";
