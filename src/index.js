@@ -7,7 +7,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 
-import { CartProvider } from './context/CartContext';
 import { NotificationProvider } from './context/NotificationContext';
 import App from './App';
 import './index.css';
@@ -23,9 +22,9 @@ root.render(
 
           {/* <UserProvider> */}
           {/* <CategoriesProvider> */}
-          <CartProvider>
+          {/* <CartProvider> */}
             <App />
-          </CartProvider>
+          {/* </CartProvider> */}
           {/* </CategoriesProvider> */}
           {/* </UserProvider> */}
 
@@ -34,8 +33,6 @@ root.render(
 
     </Provider>
   </React.StrictMode>
-
-
 );
 
 // If you want to start measuring performance in your app, pass a function

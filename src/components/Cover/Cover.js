@@ -1,11 +1,14 @@
-import { useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
+import { useSelector, useDispatch } from 'react-redux'
+import { selectIsCartOpen } from '../../store/cart/cart.selector'
+import { setIsCartOpen } from '../../store/cart/cart.action'
 import './Cover.scss'
 
 
 function Cover() {
-    const { isCartOpen, setIsCartOpen } = useContext(CartContext)
-    const toggleIsCartOpen = () => { setIsCartOpen(!isCartOpen) }
+    const dispatch = useDispatch()
+    const isCartOpen = useSelector(selectIsCartOpen)
+
+    const toggleIsCartOpen = () => dispatch(setIsCartOpen(!isCartOpen))
 
     return <div className='cover' onClick={toggleIsCartOpen}></div>
 }
