@@ -3,8 +3,8 @@ import { useDispatch } from 'react-redux';
 
 import { Routes, Route } from 'react-router-dom';
 
-import { onAuthStateChangedListener, createUserDocumentFromAuth, getCurrentUser } from "./utils/firebase/firebase.utils";
-import { setCurrentUser } from './store/user/user.action'
+// import { onAuthStateChangedListener, createUserDocumentFromAuth, getCurrentUser } from "./utils/firebase/firebase.utils";
+import { checkUserSession } from './store/user/user.action'
 
 import Home from './routes/Home/Home'
 import Navigation from './routes/Navigation/Navigation';
@@ -18,7 +18,7 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    getCurrentUser().then(user => console.log(user))
+    dispatch(checkUserSession())
   }, [])
 
   return (
