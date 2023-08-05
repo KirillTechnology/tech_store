@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { useNavigate } from 'react-router-dom'
 import {
     auth,
     signInWithGooglePopup,
@@ -18,6 +19,7 @@ const defaultFormFields = {
 }
 
 function SignInForm() {
+    const navigate = useNavigate()
     const [formFields, setFormFields] = useState(defaultFormFields)
     const { email, password } = formFields
 
@@ -37,6 +39,7 @@ function SignInForm() {
         try {
             await signInAuthUserWithEmailAndPassword(email, password)
             setFormFields(defaultFormFields)
+            navigate('/')
         } catch (e) {
             switch (e.code) {
                 case 'auth/wrong-password':
@@ -61,6 +64,7 @@ function SignInForm() {
 
     const signInGoogle = async () => {
         await signInWithGooglePopup();
+        navigate('/')
     }
 
     return (

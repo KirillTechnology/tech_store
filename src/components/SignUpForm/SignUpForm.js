@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from 'react-router-dom'
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils"
 import FormInput from "../FormInput/FormInput"
 import Button, {BUTTON_TYPE_CLASSES} from "../Button/Button"
@@ -12,6 +13,7 @@ const defaultFormFields = {
 }
 
 function SignUpForm() {
+    const navigate = useNavigate()
     const [formFields, setFormFields] = useState(defaultFormFields)
     const { displayName, email, password, confirmPassword } = formFields
 
@@ -29,11 +31,15 @@ function SignUpForm() {
         } catch (e) {
             if (e.code === 'auth/email-already-in-use') {
                 alert('Cannot create a user, email already in use')
+                return
             } else {
                 console.log('User creating error:', e)
+                return
             }
 
         }
+        navigate('/')
+        // console.log('COOL')
     }
 
     const handleChange = (event) => {
