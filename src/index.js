@@ -19,7 +19,7 @@ root.render(
   // <React.StrictMode>
 
   <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
+    {/* <PersistGate loading={null} persistor={persistor}> */}
 
       <BrowserRouter>
         <NotificationProvider>
@@ -27,7 +27,7 @@ root.render(
         </NotificationProvider>
       </BrowserRouter>
 
-    </PersistGate>
+    {/* </PersistGate> */}
   </Provider>
 
   // </React.StrictMode>
