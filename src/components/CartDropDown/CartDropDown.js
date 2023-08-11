@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { setIsCartOpen } from '../../store/cart/cart.reducer'
+import { setIsCartOpen } from '../../store/cart/cart.slice'
 import { selectCartItems } from '../../store/cart/cart.selector'
 
 import CartItem from '../CartItem/CartItem'
