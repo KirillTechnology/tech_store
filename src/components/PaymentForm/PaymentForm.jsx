@@ -7,7 +7,7 @@ import { selectCurrentUser } from '../../store/user/user.selector'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 
 import Button, { BUTTON_TYPE_CLASSES } from '../Button/Button'
-import { PaymentFormContainer, FormContainer, PaymentButton} from './PaymentForm.style'
+import { PaymentFormContainer, FormContainer, PaymentButton, PaymentLabel, PaymentInput } from './PaymentForm.style'
 
 
 const PaymentForm = () => {
@@ -34,8 +34,6 @@ const PaymentForm = () => {
 
         const { paymentIntent: { client_secret } } = response
 
-        // console.log('CU:', currentUser)
-        // console.log('CU.DN:', currentUser.displayName)
         const paymentResult = await stripe.confirmCardPayment(client_secret, {
             payment_method: {
                 card: elements.getElement(CardElement),
@@ -48,7 +46,7 @@ const PaymentForm = () => {
         setIsProcessingPayment(false)
 
         if (paymentResult.error) {
-            alert(paymentResult.error)
+            alert('Payment error')
         } else {
             if (paymentResult.paymentIntent.status === 'succeeded') {
                 alert('Payment Successful')
@@ -60,6 +58,17 @@ const PaymentForm = () => {
         <PaymentFormContainer>
             <FormContainer onSubmit={paymentHandler}>
                 <h2>Credit Card Payment:</h2>
+                <span>
+                    <PaymentLabel htmlFor='name'>Name {'  '}</PaymentLabel>
+                    <PaymentInput type='text' id='name' required></PaymentInput>
+                </span>
+
+                <span>
+                    <PaymentLabel htmlFor='email'>Email {'  '}</PaymentLabel>
+                    <PaymentInput type='email' id='email' required></PaymentInput>
+                </span>
+
+
                 <CardElement />
                 <PaymentButton buttonType={BUTTON_TYPE_CLASSES.base} isLoading={isProcessingPayment}>Pay now</PaymentButton>
             </FormContainer>
