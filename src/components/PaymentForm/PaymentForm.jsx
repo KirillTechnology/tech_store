@@ -8,7 +8,13 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 
 import Button, { BUTTON_TYPE_CLASSES } from '../Button/Button'
 import { PaymentFormContainer, FormContainer, PaymentButton, PaymentLabel, PaymentInput } from './PaymentForm.style'
+import FormInput from '../FormInput/FormInput'
 
+
+const defaultFormFields = {
+    name: '',
+    email: ''
+}
 
 const PaymentForm = () => {
     const stripe = useStripe()
@@ -16,6 +22,13 @@ const PaymentForm = () => {
     const amount = useSelector(selectCartTotal)
     const currentUser = useSelector(selectCurrentUser)
     const [isProcessingPayment, setIsProcessingPayment] = useState(false)
+    const [formFields, setFormFields] = useState(defaultFormFields)
+    const { name, email } = formFields
+   
+    const handleChange = (event) => {
+        const { name, value } = event.target
+        setFormFields({ ...formFields, [name]: value })
+    }
 
     const paymentHandler = async (e) => {
         e.preventDefault()
@@ -57,8 +70,8 @@ const PaymentForm = () => {
     return (
         <PaymentFormContainer>
             <FormContainer onSubmit={paymentHandler}>
-                <h2>Credit Card Payment:</h2>
-                <span>
+                <h2>Credit Card Payment</h2>
+                {/* <span>
                     <PaymentLabel htmlFor='name'>Name {'  '}</PaymentLabel>
                     <PaymentInput type='text' id='name' required></PaymentInput>
                 </span>
@@ -66,10 +79,14 @@ const PaymentForm = () => {
                 <span>
                     <PaymentLabel htmlFor='email'>Email {'  '}</PaymentLabel>
                     <PaymentInput type='email' id='email' required></PaymentInput>
-                </span>
+                </span> */}
 
+                <FormInput label={'Name'} type='text' required name="name" onChange={handleChange} value={name} />
+                <FormInput label={'Email'} type='email' required name="email" onChange={handleChange} value={email} />
+                <br />
 
                 <CardElement />
+                <br />
                 <PaymentButton buttonType={BUTTON_TYPE_CLASSES.base} isLoading={isProcessingPayment}>Pay now</PaymentButton>
             </FormContainer>
         </PaymentFormContainer>

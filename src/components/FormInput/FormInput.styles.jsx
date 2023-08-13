@@ -12,7 +12,7 @@ const shrinkLabelStyles = css`
 
 export const InputLabel = styled.label`
     color: ${subColor};
-    font-size: 16px;
+    font-size: 14px;
     position: absolute;
     left: 0;
     top: 15px;
@@ -24,7 +24,7 @@ export const InputLabel = styled.label`
 export const Input = styled.input`
     border: none;
     border-bottom: 1px solid black;
-    font-size: 18px;
+    font-size: 14px;
     padding: 20px 5px 5px 5px;
     width: 240px;
 

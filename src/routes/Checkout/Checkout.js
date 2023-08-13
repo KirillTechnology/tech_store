@@ -29,6 +29,8 @@ function Checkout() {
 
 
             <span className='total'>Total: ${cartTotal}.00</span>
+            <br/>
+            <br/>
             <PaymentForm />
         </div>
     )

@@ -10,16 +10,18 @@ export const PaymentFormContainer = styled.div`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 20px;
+    width: min(500px, 100%);
+    box-sizing: border-box;
 `
 
 export const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
     align-items: unset;
-    gap: 20px;
+    // gap: 20px;
     justify-content: space-between;
     // height: 140px;
-    min-width: 400px;
+    width: 100%;
 `
 
 export const PaymentButton = styled(Button)`
@@ -35,6 +37,7 @@ export const PaymentInput = styled.input`
     border: none;
     border-bottom: 1px solid grey;
     font-size: 1em;
+    width: 100%;
     &:focus {
         outline: none;
     }
