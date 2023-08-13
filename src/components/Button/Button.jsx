@@ -1,4 +1,4 @@
-import { BaseButton, GoogleSignInButton } from "./Button.styles.jsx"
+import { BaseButton, GoogleSignInButton, ButtonSpinner } from "./Button.styles.jsx"
 // import './Button.scss'
 
 
@@ -16,10 +16,14 @@ const getButton = (buttonType = 'base') => {
     )
 }
 
-function Button({ buttonType, children, ...otherProps }) {
+function Button({ buttonType, children, isLoading, ...otherProps }) {
     const CustomButton = getButton(buttonType)
 
-    return <CustomButton {...otherProps}> {children} </CustomButton>
+    return (
+        <CustomButton disabled={isLoading} {...otherProps}>
+            {isLoading ? <ButtonSpinner /> : children}
+        </CustomButton>
+    )
 }
 
 

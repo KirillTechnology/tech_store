@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-
+import { SpinnerContainer } from '../Spinner/Spinner.styles'
 
 export const BaseButton = styled.button`
     border: 2px solid green;
@@ -10,6 +10,9 @@ export const BaseButton = styled.button`
     color: green;
     font-weight: bold;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         box-shadow: 0 0 5px green;
@@ -33,4 +36,9 @@ export const GoogleSignInButton = styled(BaseButton)`
     &:hover {
         box-shadow: 0 0 5px grey;
     }
+`
+
+export const ButtonSpinner = styled(SpinnerContainer)`
+    width: 20px;
+    height: 20px;
 `
